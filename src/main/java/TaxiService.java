@@ -11,10 +11,10 @@ public class TaxiService {
         int sumForDiscount = 1000;
         float sumDiscount = 0;
         if (costOfTrip >= sumForDiscount) {
-          sumDiscount = costOfTrip*5/100;
+            sumDiscount = costOfTrip * 5 / 100;
         }
-        if (sumDiscount>maxDiscount) {
-            sumDiscount=maxDiscount;
+        if (sumDiscount > maxDiscount) {
+            sumDiscount = maxDiscount;
         }
         return sumDiscount;
     }
