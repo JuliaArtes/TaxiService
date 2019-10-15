@@ -3,10 +3,6 @@ public class TaxiService {
         int landingCost = 60;
         int costKm = 20;
         float costOfTrip = tripDistanceKm * costKm + landingCost;
-        return costOfTrip;
-    }
-
-    public float calculateDiscount(float costOfTrip) {
         int maxDiscount = 100;
         int sumForDiscount = 1000;
         float sumDiscount = 0;
@@ -16,6 +12,9 @@ public class TaxiService {
         if (sumDiscount > maxDiscount) {
             sumDiscount = maxDiscount;
         }
-        return sumDiscount;
+        costOfTrip = costOfTrip - sumDiscount;
+        return costOfTrip;
     }
+
+
 }
